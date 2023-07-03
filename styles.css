@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Khula', sans-serif;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	text-align: center;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #954343;
+}
+
+.start, .back {
+	font-size: 1.5rem;
+}
+
+h1 {
+	line-height: 1.4;
+	font-size: 4rem;
+}
+
+h2 {
+	margin: 0;
+}
+.screen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	transition: margin 0.5s ease-out;
+	background: #e2d1c3;
+}
+
+.screen.up {
+	margin-top: -100vh;
+}
+
+.time-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+}
+
+.time-list li {
+	margin: 10px;
+}
+
+.time-btn,
+.back-btn {
+	background-color: transparent;
+	border: 2px solid #000;
+	cursor: pointer;
+	font-family: inherit;
+	padding: 0.5rem 1rem;
+	font-size: 1.5rem;
+}
+
+.time-btn:hover,
+.back-btn:hover {
+	border: 2px solid #954343;
+	color: #954343;
+}
+
+.hide {
+	opacity: 0;
+}
+
+.primary {
+	color: #954343;
+}
+
+.board {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 500px;
+	height: 500px;
+	background: #e2d1c3;
+	box-shadow: 2px 2px 22px #0e0601;
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+.circle {
+	position: absolute;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.board {
+		width: 450px;
+		height: 450px;
+	}
+
+	.time-list {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	h1 {
+		font-size: 3.5rem;
+	}
+	.board {
+		width: 350px;
+		height: 350px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	h1 {
+		font-size: 3rem;
+	}
+	.board {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	.board {
+		width: 280px;
+		height: 280px;
+	}
+}
