@@ -86,10 +86,10 @@ function finishGame() {
 function createRandomCircle() {
 	const circle = document.createElement('div');
 	const size =
-		getWindowWidth() < 600 ? getRandomNumber(17, 40) : getRandomNumber(10, 40);
+		getWindowWidth() < 600 ? getRandomNumber(22, 50) : getRandomNumber(12, 45);
 	const { width, height } = board.getBoundingClientRect();
-	const x = getRandomNumber(0, width - size);
-	const y = getRandomNumber(0, height - size);
+	const x = getRandomNumber(0, width - (size - 15));
+	const y = getRandomNumber(0, height - (size - 15));
 	let color = getRandomColor();
 
 	circle.style.backgroundColor = color;
