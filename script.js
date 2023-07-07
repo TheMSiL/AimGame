@@ -85,7 +85,8 @@ function finishGame() {
 
 function createRandomCircle() {
 	const circle = document.createElement('div');
-	const size = getRandomNumber(10, 40);
+	const size =
+		getWindowWidth() < 600 ? getRandomNumber(17, 40) : getRandomNumber(10, 40);
 	const { width, height } = board.getBoundingClientRect();
 	const x = getRandomNumber(0, width - size);
 	const y = getRandomNumber(0, height - size);
@@ -99,6 +100,14 @@ function createRandomCircle() {
 	circle.style.left = `${x}px`;
 
 	board.append(circle);
+}
+
+function getWindowWidth() {
+	return (
+		window.innerWidth ||
+		document.documentElement.clientWidth ||
+		document.body.clientWidth
+	);
 }
 
 function getRandomNumber(min, max) {
